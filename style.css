@@ -4,7 +4,7 @@ span {
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
-    align-items: flex-end;
+    align-items: center;
     flex: 1;
     /*width: 100%
     background-color: white;*/
@@ -13,21 +13,32 @@ span {
     box-shadow: 6px 10px 10px #B3B3B3;
     padding: 5px 20px;
     background-color: #F4FFFB;
-    line-height: 20px;
+    min-height: 70px;
 }
 h1 {
     display: flex;
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     color: #747876
 }
 h2 {
-    font-size: 12px;
+    font-size: 16px;
     color: #747876
 }
 .addRemove {
     height: 50px;
     margin: 15px;
+}
+.remove{
+    justify-content: flex-end;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
 }
 
 .longer {
@@ -36,9 +47,11 @@ h2 {
 .quote-front {
     height: 15px;
     align-self: flex-start;
+    padding-bottom: 20px;
 }
 .quote-back {
     height: 15px;
     align-self: flex-start;
     transform: rotateZ(180deg);
+    padding-top: 20px;
 }
