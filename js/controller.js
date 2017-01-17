@@ -1,7 +1,10 @@
 angular.module('myApp')
   .controller('myController', function($scope, quoteSvc){
 
-      $scope.getQuotes = quoteSvc.getQuotes();
+      $scope.Quotes = quoteSvc.getQuotes();
       $scope.addData = quoteSvc.addData;
-      $scope.removeData = quoteSvc.removeData;
+      $scope.removeData = function(quoteObj) {
+          quoteSvc.removeData(quoteObj);
+      }
+
   });

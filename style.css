@@ -2,17 +2,29 @@
 
 span {
     display: flex;
+    flex-direction: row;
     flex-flow: wrap;
     align-items: flex-end;
     flex: 1;
-    width: 100%
-    background-color: white;
+    /*width: 100%
+    background-color: white;*/
     border-radius: 25px;
     /*border-bottom: 6px #B3B3B3 solid;*/
     box-shadow: 6px 10px 10px #B3B3B3;
     padding: 5px 20px;
+    background-color: #F4FFFB;
+    line-height: 20px;
 }
-
+h1 {
+    display: flex;
+    margin: 0;
+    font-size: 16px;
+    color: #747876
+}
+h2 {
+    font-size: 12px;
+    color: #747876
+}
 .addRemove {
     height: 50px;
     margin: 15px;
@@ -20,4 +32,13 @@ span {
 
 .longer {
     width: 75%;
+}
+.quote-front {
+    height: 15px;
+    align-self: flex-start;
+}
+.quote-back {
+    height: 15px;
+    align-self: flex-start;
+    transform: rotateZ(180deg);
 }

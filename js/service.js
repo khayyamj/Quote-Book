@@ -16,14 +16,26 @@ angular.module('myApp')
    }
 
    this.addData = function(quoteObj) {
-       (quoteObj[0]) && (quoteObj[1]) ? quotes.push(quoteObj) : alert('Error: Missing Data!');
+       if (quoteObj) {
+           quoteObj.text && quoteObj.author ? quotes.push(quoteObj) : alert('Error: Missing Data!');
+       }    else {
+                alert('No information provided')
+            }
    };
 
    this.removeData = function(quoteObj) {
-       for (var x = 0; x < quoteObj.length; x++) {
-           if (quotes[i].text === quoteObj.text || quotes[i].author === quoteObj.author) {
-               quotes.splice(i--,1);
-           }
-       }
-   }
+       console.log(quoteObj);
+        if (quoteObj) {
+            for (var x = 0; x < quotes.length; x++) {
+                console.log(quotes[x].text,quoteObj.text);
+               if (quotes[x].text === quoteObj.text || quotes[x].author === quoteObj.author) {
+                   quotes.splice(x,1);
+                   x--;
+               }
+            }
+        } else {
+                alert('No information provided')
+            }
+    return quotes;
+   };
   });

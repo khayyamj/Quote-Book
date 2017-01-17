@@ -6,18 +6,20 @@
         <title>Quote Book</title>
     </head>
     <body ng-controller="myController">
-        <div ng-repeat="quote in getQuotes">
+        <div ng-repeat="quote in Quotes">
             <span>
-                "<h1>{{quote.text}}</h1>"
+                <img src="images/quote.png" class="quote-front">
+                <h1>{{quote.text}}</h1>
+                <img src="images/quote.png" class="quote-back">
                 <h2>{{quote.author}}</h2>
             </span>
         </div>
 
         <div class="addRemove">
-            <input ng-value="quoteText" placeholder="'Quote'" class="longer" />
-            <input ng-value="quoteAuthor" placeholder="Author" /> </br>
-            <button ng-model="addQuote">Add Quote</button>
-            <button ng-model="removeQuote">Remove Quote</button>
+            <input ng-model="quoteObj.text" placeholder="'Quote'" class="longer" />
+            <input ng-model="quoteObj.author" placeholder="Author" /> </br>
+            <button ng-click="addData(quoteObj)">Add Quote</button>
+            <button ng-click="removeData(quoteObj)">Remove Quote</button>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
